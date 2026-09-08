@@ -1,0 +1,2 @@
+# Video pipeline
+The implemented mock queues a typed job only. Target production worker: validate object-storage images → normalize → 1080x1920 motion timeline → Turkish TTS → timed captions → factual price/model overlays → brand/CTA → FFmpeg MP4. Use argument arrays (not shell concatenation), constrained protocols/paths, resource/time limits, and safe errors. A deterministic silent/local TTS fixture should precede external TTS.

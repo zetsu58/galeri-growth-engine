@@ -1,0 +1,2 @@
+# Architecture
+Next.js App Router provides UI/API. Pure domain modules contain AI, scoring, messaging and job contracts. Supabase PostgreSQL is the planned production authority; every owned row has `dealership_id` and RLS membership checks. Offline providers power a credential-free demo. Expensive media is represented as an asynchronous job and must be rendered by a worker. Adapter boundaries permit OpenAI/OpenRouter, Meta Cloud API, FFmpeg/TTS and a durable queue without coupling domain logic.

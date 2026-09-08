@@ -1,0 +1,2 @@
+# Database
+Demo state is a private local JSON document with serialized atomic writes. Every lookup/mutation checks the session-derived dealership. Initial SQL models the commercial graph; corrective migration `202609080002_tenant_integrity.sql` removes direct dealership insert, adds composite tenant foreign keys, one-cover uniqueness, update timestamps and tightened function grants. Apply in order with Supabase CLI. Live Supabase repository/RLS integration tests remain required.

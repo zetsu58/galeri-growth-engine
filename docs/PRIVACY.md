@@ -1,0 +1,2 @@
+# Privacy and KVKK readiness
+The schema models consent, opt-out, audit logs and deletion cascades; demo follow-ups are cancelled on critical human handoff and never auto-send. The local demo stores synthetic data only and can be erased with `.data`/upload deletion. Production requires access/export/correction/deletion workflows, retention jobs, lawful-basis records, processor agreements, residency decisions, breach response and channel consent enforcement. This is not a claim of KVKK compliance; Turkish counsel must review it.

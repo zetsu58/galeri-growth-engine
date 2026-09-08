@@ -1,0 +1,2 @@
+# WhatsApp
+`MockWhatsAppProvider` strictly normalizes events. Authenticated ingestion derives the tenant, persists tenant/event idempotency, resolves an active vehicle, normalizes phone, persists lead/conversation/message/score, escalates HOT leads and cancels follow-ups. Production remains official Meta Cloud API only and must add raw-body HMAC verification, Redis rate limits and policy-window/template enforcement.

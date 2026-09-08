@@ -1,0 +1,2 @@
+# Video pipeline
+The demo persists a completed, explicitly labelled storyboard result and does **not** claim an MP4. Production worker target: queued → processing → completed/failed; normalize safe images → 1080x1920 motion timeline → Turkish TTS → captions → factual overlays → branding/CTA → FFmpeg MP4. Use spawn argument arrays, protocol/path allowlists and CPU/time limits. Implementing and ffprobe-testing that worker is the next media milestone.

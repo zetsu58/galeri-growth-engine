@@ -1,0 +1,2 @@
+# Deployment
+Demo: Node 22, `.env.example`, `npm ci`, `npm run build`, `npm start`. Docker builds the standalone Next output. Set a high-entropy `SESSION_SECRET`; mount writable demo state only for evaluation. Production must replace local repository/rate limiter with Supabase plus distributed infrastructure, apply migrations before traffic, terminate TLS, configure CSP/origins, backups and monitoring. `/api/health` is liveness only, not dependency readiness.

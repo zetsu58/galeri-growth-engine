@@ -1,0 +1,2 @@
+# Security
+Defense in depth: Supabase Auth, membership-derived tenant RLS, schema validation, parameterized database APIs, escaped React rendering, webhook signatures/idempotency/rate limits, least-privilege service keys, structured redacted logs and audit records. Uploads must be ≤ configured size, decode and verify magic bytes, allow JPEG/PNG/WebP only, discard filenames, generate UUID paths and re-encode before publication. Secrets belong in environment/secret managers. Run dependency and RLS integration audits before launch.

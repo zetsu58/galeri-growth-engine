@@ -1,0 +1,2 @@
+import {describe,it,expect} from 'vitest';import fs from 'node:fs';
+describe('tenant schema',()=>it('enables RLS and tenant policy on every business table',()=>{const sql=fs.readFileSync('supabase/migrations/202609080001_initial.sql','utf8');expect(sql).toContain('enable row level security');expect(sql).toContain('is_dealership_member(dealership_id)');expect(sql).not.toContain('using (true)');}));

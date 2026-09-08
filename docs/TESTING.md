@@ -1,0 +1,2 @@
+# Testing
+Unit tests cover the acceptance-message HOT result and score bounds. Provider tests cover structured content, malformed input and duplicate events. Schema regression checks assert RLS. Required: `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`. Production readiness additionally requires Supabase-backed authorization/RLS tests and Playwright login→vehicle→content→video→message→dashboard assertions.

@@ -1,0 +1,2 @@
+# Privacy and KVKK readiness
+The schema supports consent, opt-out, auditability and tenant deletion relationships. Define documented retention, export/correction/deletion workflows, lawful bases, processor agreements, data residency and breach response before production. Automated follow-up stops on opt-out, sale or human takeover. This architecture is not a claim of KVKK compliance; Turkish counsel must review it.

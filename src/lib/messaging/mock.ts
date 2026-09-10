@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { extractDemoSignals, scoreLead } from "@/lib/leads/scoring";
+import { extractDemoSignals, scoreLead } from "../leads/scoring";
 export const incomingMessageSchema = z.object({eventId:z.string().min(1).max(100), dealershipId:z.string().uuid(), from:z.string().min(5).max(30), text:z.string().min(1).max(4000)}).strict();
 const processed = new Set<string>();
 export function ingestMockMessage(input: unknown) {

@@ -1,0 +1,3 @@
+import {requireContext} from "@/lib/auth/context";import {transact,view} from "@/lib/repository/local";import {vehicleInput} from "@/lib/vehicles/schema";import {apiError} from "@/lib/api";
+export async function GET(){try{const c=await requireContext();return Response.json(await view(c.dealershipId,db=>db.vehicles))}catch(e){return apiError(e)}}
+export async function POST(req:Request){try{const c=await requireContext();const input=vehicleInput.parse(await req.json());const vehicle={...input,id:crypto.randomUUID(),dealershipId:c.dealershipId,createdAt:new Date().toISOString(),media:[]};await transact(db=>db.vehicles.push(vehicle));return Response.json(vehicle,{status:201})}catch(e){return apiError(e)}}

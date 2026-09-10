@@ -1,10 +1,10 @@
 import { z } from "zod";
 
 export const salesContentSchema = z.object({
-  listingTitle:z.string(), listingDescription:z.string(), shortDescription:z.string(),
-  instagramCaption:z.string(), storyText:z.string(), reelHook:z.string(), reelScript:z.string(),
-  cta:z.string(), hashtags:z.array(z.string()), whatsappDescription:z.string(),
-});
+  listingTitle:z.string().min(5).max(140), listingDescription:z.string().min(20).max(5000), shortDescription:z.string().min(5).max(500),
+  instagramCaption:z.string().min(5).max(2200), storyText:z.string().min(3).max(500), reelHook:z.string().min(3).max(200), reelScript:z.string().min(10).max(3000),
+  cta:z.string().min(3).max(300), hashtags:z.array(z.string().regex(/^#[\p{L}\p{N}_]+$/u)).max(20), whatsappDescription:z.string().min(5).max(2000),
+}).strict();
 export type SalesContent = z.infer<typeof salesContentSchema>;
 export type VehicleFacts = { brand:string; model:string; trim:string; year:number; mileage:number; price:number; transmission:string; fuel:string };
 export interface AIProvider { generateSalesContent(vehicle: VehicleFacts): Promise<SalesContent> }

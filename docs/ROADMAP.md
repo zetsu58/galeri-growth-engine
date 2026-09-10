@@ -1,6 +1,6 @@
 # Roadmap
-1. Supabase Auth onboarding and server-side repository layer with live RLS tests.
-2. Signed, re-encoded Storage uploads and vehicle CRUD UI.
-3. Durable queue and sandboxed FFmpeg/TTS worker with deterministic render fixture.
-4. Official Meta webhook adapter, human inbox and consent-aware follow-up scheduler.
-5. Attribution queries, appointment/sale workflows, observability, E2E and security review.
+1. Complete Supabase Auth/repository and live two-user RLS/HTTP authorization suite.
+2. Re-encode uploads with Sharp/object storage and add gallery/cover controls to the browser flow.
+3. Durable worker with FFmpeg 1080x1920 output, subtitles/local TTS and ffprobe tests.
+4. Official Meta webhook signature adapter, distributed idempotency/rate limiting and outbound policy engine.
+5. Editable content persistence, appointments/sales attribution, consent workflows and operational monitoring.

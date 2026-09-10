@@ -1,0 +1,3 @@
+import {requireContext} from "@/lib/auth/context";import {requireVehicle,transact} from "@/lib/repository/local";import {vehicleInput} from "@/lib/vehicles/schema";import {apiError} from "@/lib/api";
+export async function GET(_:Request,{params}:{params:Promise<{id:string}>}){try{const c=await requireContext(),{id}=await params;return Response.json(await transact(db=>requireVehicle(db,c.dealershipId,id)))}catch(e){return apiError(e)}}
+export async function PUT(req:Request,{params}:{params:Promise<{id:string}>}){try{const c=await requireContext(),{id}=await params,input=vehicleInput.parse(await req.json());return Response.json(await transact(db=>Object.assign(requireVehicle(db,c.dealershipId,id),input)))}catch(e){return apiError(e)}}

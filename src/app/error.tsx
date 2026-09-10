@@ -1,0 +1,1 @@
+"use client";export default function ErrorPage({reset}:{reset:()=>void}){return <main className="center"><section className="authCard"><h1>Bir şey ters gitti</h1><p>Güvenli şekilde yeniden deneyebilirsiniz.</p><button onClick={reset}>Tekrar dene</button></section></main>}

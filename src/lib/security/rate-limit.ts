@@ -1,0 +1,2 @@
+type Bucket={count:number;reset:number};export interface RateLimiter{consume(key:string):boolean}export class MemoryRateLimiter implements RateLimiter{private buckets=new Map<string,Bucket>();constructor(private limit=20,private windowMs=60_000){}consume(key:string){const now=Date.now(),old=this.buckets.get(key);if(!old||old.reset<=now){this.buckets.set(key,{count:1,reset:now+this.windowMs});return true}if(old.count>=this.limit)return false;old.count++;return true}}
+export const mutationLimiter=new MemoryRateLimiter();
